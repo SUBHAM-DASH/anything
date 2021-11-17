@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet"> 
+        <title><%= title%></title>
+        <style>
+            body{
+                font-family: 'Balsamiq Sans', cursive;
+                margin: 0px;
+            }
+            th{
+                padding:0px 50px;
+                font-size: 20px;
+                color:darkolivegreen;
+            }
+            td{
+                padding:50px;
+                font-size: 13px;
+            }
+            .btn{
+                color:white;
+                background-color: blue;
+                padding:10px;
+                font-size: 16px;
+                border:none;
+                border-radius: 5px;
+                cursor:pointer
+            }
+            .container .btn:hover {
+                background-color: rgb(0, 0, 0);
+                color: white;
+            }
+            nav{
+                background-color: blue;
+                padding:20px;
+                margin-bottom: 30px;
+            }
+            li{
+                display: inline;
+                padding:18px;
+                list-style: none;
+                color:white;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            a{
+                text-decoration: none;
+            }
+            li:hover{
+                color:rgb(139, 0, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <a href="/userdetails"><li>Userdetails</li></a>
+                <a href="/creditcarddetails"><li>Creditcard details</li></a>
+                <a href="/adminproduct"><li>Products</li></a>
+                <a href="/cartproduct"><li>Cartproduct</li></a>
+            </ul>
+        </nav>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Product Date</th>
+                <th>Price</th>
+            </tr>
+            <%user.forEach((i)=>{ %>
+                <tr>
+                    <td><img src="/static/<%=i.image%>" alt="image not found" height="200" width="200"></td>
+                    <td><%=i.product_name%></td>
+                    <td><%=i.product_detail.substring(0,15)%>..</td>
+                    <td><%=i.price%></td>
+                </tr>
+            <% }); %>
+        </table>
+    </body>
+</html>

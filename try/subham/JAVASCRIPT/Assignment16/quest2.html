@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quest-2</title>
+        <style>
+            *{
+                margin: 0px;
+            }
+            body{
+                background-color: rgb(171, 224, 233);
+            }
+            nav{
+                background-color: mediumspringgreen;
+                height:80px;
+            }
+            div{
+                width:950px;
+                margin-top: 50px;
+                margin-left: 260px;
+            }
+            button{
+                width:100px;
+                height:30px;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h1>Quest-2 programme with 40 or 50 words</h1>
+        </nav>
+        <div>
+            <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni dolor, asperiores, tempore hic culpa voluptates dolores at nobis a eum corrupti! Cumque eligendi, porro ipsa fugit aliquid obcaecati quibusdam qui! Beatae, molestias voluptate dolorum eaque error ad voluptatem fugit quaerat dolorem earum iure vero tempora commodi! Animi consectetur quasi nisi, possimus omnis perspiciatis assumenda iure minima quibusdam recusandae eum iusto. Accusamus omnis consectetur, aspernatur itaque iste quo ut consequuntur debitis? Corporis dolore, asperiores natus illum quo reiciendis animi adipisci officia doloremque odio deleniti aliquam distinctio eius autem eligendi in quidem? Beatae ipsa placeat tenetur voluptate? Sed dignissimos minima ipsam eos.</p>
+            <fieldset>
+                <legend>color</legend>
+                <button onclick="red()">red</button>
+                <button onclick="blue()">blue</button>
+                <button onclick="green()">green</button>
+            </fieldset>
+            <fieldset>
+                <legend>size</legend>
+                <button onclick="sizesm()">10px</button>
+                <button onclick="sizemd()">15px</button>
+                <button onclick="sizelg()">20px</button>
+            </fieldset>
+            <fieldset>
+                <legend>font-family</legend>
+                <button onclick="cambria()">Monospace</button>
+                <button onclick="georgia()">Cursive</button>
+                <button onclick="calibri()">Sans-serif</button>
+            </fieldset>
+        </div>
+        <script>
+            function red(){
+                document.getElementById('para').style.color="red";
+            }
+            function blue(){
+                document.getElementById('para').style.color="blue";
+            }
+            function green(){
+                document.getElementById('para').style.color="green";
+            }
+            function sizesm(){
+                document.getElementById('para').style.fontSize="10px";
+            }
+            function sizemd(){
+                document.getElementById('para').style.fontSize="15px";
+            }
+            function sizelg(){
+                document.getElementById('para').style.fontSize="20px";
+            }
+            function cambria(){
+                document.getElementById('para').style.fontFamily="Monospace";
+            }
+            function georgia(){
+                document.getElementById('para').style.fontFamily="Cursive";
+            }
+            function calibri(){
+                document.getElementById('para').style.fontFamily="Sans-serif";
+            }
+        </script>
+    </body>
+</html>

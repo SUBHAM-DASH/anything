@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest4</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        input{
+            width:200px;
+            height:30px;
+            margin-left: 70px;
+            margin-top: 50px;
+            border:2px solid black;
+        }
+        nav{
+            height:70px;
+            width:100%;
+            background-color: dodgerblue;
+        }
+        button{
+            margin-left: 70px;
+            height:30px;
+            width:70px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Quest4 geterate a table</h1>
+    </nav>
+        <input type="number" placeholder="put your number..." id="ids">
+        <br><br>
+        <button onclick="create()">create</button>
+    <script>
+        function create(){
+            var n1=document.getElementById('ids').value;
+            document.write("User entered :"+n1+'<br><br>');
+            for(let i=1;i<=10;i++){
+                document.write(n1+" x "+i+"="+n1*i+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>

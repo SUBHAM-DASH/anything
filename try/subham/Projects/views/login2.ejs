@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>title</title>
+        <script src="/javascript/index.js"></script>
+        <style>
+            body{
+                margin:0px;
+            }
+            .container{
+                height:800px;
+                border: 1px solid;
+                padding: 10px;
+                box-shadow: 5px 10px 20px rgb(117, 180, 9) inset;
+                margin: auto;
+                width: 60%;
+                border: 3px solid rgb(141, 156, 141);
+                padding: 20px;
+            }
+            form{
+                font-weight: bold;
+                font-size: 22px;
+            }
+            form input{
+                width:250px;
+                height:30px;
+                border:3px solid black;
+                margin-right: 40px;
+                font-size: 17px;
+                display:block;
+                margin:auto;
+                padding: 3px 100px;
+                border-radius: 15px;
+            }
+            label{
+                margin-left: 40%;
+                margin-top: 10px;
+                color:crimson;
+            }
+            h1{
+                text-align: center;
+            }
+            button{
+                background-color: rgb(216, 213, 17);
+                color:white;
+                width:30%;
+                border-radius: 30px;
+                height: 40px;
+                margin-left: 34%;
+                margin-top: 5%;
+                font-size: 20px;
+            }
+            .header {
+                text-align: center;
+                background: #1abc9c;
+                color: white;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>...SHARE YOUR DETAILS...</h1>
+        </div>
+        <div class="container">
+            <form action="/save" method="post">
+                <label for="firstname">First Name :</label>
+                <input id="firstname" type="text" name="firstname" placeholder="Enter your first name..." required>
+                <label for="lastname">Last Name :</label>
+                <input id="lastname" type="text" name="lastname" placeholder="Enter your last name..." required>
+                <label for="email">Email :</label>
+                <input id="email" type="email" name="email" placeholder="Enter your email_id..." required>
+                <label>Password :</label>
+                <input id="password" type="password" name="password" placeholder="Enter your password..." required>
+                <label for="mobile">Mobile :</label>
+                <input id="mobile" type="number" name="mobile" placeholder="Enter your mobile_no..." required>
+                <label>State :</label>
+                <input id="state" type="text" name="state" placeholder="Enter your state name..." required>
+                <label>City :</label>
+                <input id="city" type="text" name="city" placeholder="Enter your city name...">
+                <label>Address1 :</label>
+                <input id="address1" type="text" name="address1" placeholder="Enter your address1 name...">
+                <label>Address2 :</label>
+                <input id="address2" type="text" name="address2" placeholder="Enter your address2 name...">
+                <label>Pin :</label>
+                <input id="pin" type="text" name="pin" placeholder="Enter your pin no..." required>
+                <button type="submit" onclick="myfunction()">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

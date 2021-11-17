@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: darkslategrey;
+}
+.header{
+    width:100%;
+    height:80px;
+    display: block;
+    background-color: #101010;
+}
+.innerheader{
+    width:1000px;
+    height:100%;
+    display:block;
+    margin:0 auto;
+    background-color: red;
+}
+.logoclass{
+    height:100%;
+    display:table;
+    float:left;
+}
+.logoclass h1{
+    color:white;
+    height:100%;
+    padding-top: 17px;
+    font-weight: 80;
+}
+.logoclass h1 span{
+    font-weight: 800;
+    font-size: 30px;
+}
+.setin{
+    float:right;
+    height:100%;
+}
+.setin a{
+    height:100%;
+    display:table;
+    float:left;
+    padding:0px 20px;
+}
+.setin a li{
+    display:table-cell;
+    vertical-align: middle;
+    color:white;
+    font-size: 20px; 
+}
+.input{
+    float: left;
+    padding: 6px 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+button{
+    margin-left: 25px;
+    margin-top: 30px;
+    padding:8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: black;
+    color:white;
+}

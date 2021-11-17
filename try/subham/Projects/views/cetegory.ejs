@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Zen+Old+Mincho:wght@900&display=swap" rel="stylesheet">
+        <title><%= title%></title>
+        <script src="/javascript/index.js"></script>
+        <style>
+            a{
+                font-size: 20px;
+            }
+            .cls{
+                font-family:fantasy;
+            }
+            .form-inline{
+                margin-left: 300px;
+            }
+            .cls1{
+                height:600px;
+            }
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                width: 50%;
+            }
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+            .container .card{
+                margin: 10px;
+                padding: 20px 0px;
+                font-family: 'Zen Old Mincho', serif; 
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg cls navbar-dark bg-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-shop-window m-2 text-primary" viewBox="0 0 16 16">
+                <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+            <a class="navbar-brand" href="/"><span style="color:gainsboro; font-size: 35px;"><i><span style="color:blue;">S</span><span style="color: mediumvioletred;">H</span><span style="color:teal;">O</span><span style="color: slateblue;">P</span><span style="color:red">.</span>com</i></span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Login</a>
+                </li>  
+                <li class="nav-item">
+                  <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/cetegory">Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/services">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/topbrands">Topbrand's</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cart">Cart</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0 d-flex" >
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 mx-2" type="submit">Search</button>
+              </form>
+            </div>
+        </nav>
+        <div class="container-fluid p-0">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/static/used9.gif" class="d-block w-100" alt="image not found" height="450">
+                  </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-center cls m-4"><u style="color:steelblue;">Here is your products</u></h1>
+        <div class="container d-flex">
+            <%user.forEach((i)=>{ %>
+            <div class="card">
+                <img src="/static/<%= i.image%>" alt="image not found" height="210" width="170">
+                <div class="container mt-4" >
+                    <h4><%= i.product_name%></h4>  
+                    <h5><%=i.cetegory_name%></h5>
+                    <h4><b>Rs :<%= i.price%></b></h4>
+                    <p>20% discount offer</p> 
+                    <a href="/data/<%= i.sl_no%>"><button class="btn btn-primary">open</button></a>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+        <footer>
+            <p class="text-white bg-dark text-center p-3">Copyright &copy; |Electrical and Electronics goods</p>
+        </footer>    
+        <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+        -->
+    </body>
+</html>
