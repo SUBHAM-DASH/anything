@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quest5</title>
+        <style>
+            *{
+                margin: 0px;
+            }
+            nav{
+                height: 70px;
+                width:100%;
+                background-color: mediumspringgreen;
+                margin-bottom: 50px;
+            }
+            button,input{
+                margin-left: 30px;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h1>Quest5 Add a list</h1>
+        </nav>
+        <input type="text" id="ids" placeholder="enter your value">
+        <br><br>
+        <button onclick="Add()">Add</button>
+        <ol id="ids2">
+            
+        </ol>
+        <script>
+            function Add(){
+                let value=document.getElementById('ids').value;
+                let v1=document.createElement('li');
+                v1.textContent=value;
+                document.getElementById('ids2').appendChild(v1);
+            }
+        </script>
+    </body>
+</html>

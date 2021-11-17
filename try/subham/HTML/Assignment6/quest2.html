@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quest2</title>
+        <link rel="stylesheet" href="css/my.css">
+    <body>
+        <form>
+            <label>Age:</label>
+            <input class="cls1" type="radio" name="rad">
+            <label>less then 18</label>
+            <input class="cls1" type="radio" name="rad">
+            <label>18-25</label>
+            <input class="cls1" type="radio" name="rad">
+            <label>26-40</label>
+            <i style="margin: 4px;"><h1 class="cls">Professional Details</h1></i>
+            <fieldset>
+                <legend>Academic Details</legend>
+                <span><b>Skill Set:</b></span>
+                <input class="cls1" type="checkbox" name="html">
+                <label>HTML</label>
+                <input class="cls1" type="radio" name="javascript">
+                <label>JavaScript</label>
+                <input class="cls1" type="radio" name="java">
+                <label>Java</label>
+                <br>
+                <br>
+                <br>
+                <span><b>Highest Qualification :</b></span>
+                <select name="Qualification" id="quali">
+                    <option value="DiplominComputerScience">Diploma in Computer Science</option>
+                    <option value="ScienceGraduate">Science Graduate</option>
+                    <option value="BachelorinEngg">Bachelor in Engg.</option>
+                    <option value="MastersinComputerScience">Masters in Computer Science</option>
+                    <option value="MastersinEngg">Masters in Engg.</option>
+                    <option value="others">Others</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <span><b>University :</b></span>
+                <input id="inp" list="browsers" name="browser">
+                <datalist id="browsers">
+                    <option value="Mumbai University">
+                    <option value="Pune University">
+                    <option value="Chennai University">
+                    <option value="Nagpur University">
+                    <option value="Bododai University">
+                </datalist>
+                <br><br><br>
+                <span><b>Areas of Expertise :</b></span>
+                <select id="field" name="field" size="5" multiple>
+                    <option value="Software">Software</option>
+                    <option value="Training">Training</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Management">Management</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+                <span>You can select multiple fields</span>
+            </fieldset>
+        </form> 
+        <form>
+            <fieldset>
+                <legend>Resume</legend>
+                <span><b>Upload Resume:</b></span>
+                <input class="dista" type="text" placeholder="Browser...">
+                <span>No file selected</span>
+                <br><br><br>
+                <span><b>Comments:</b></span>
+                <textarea class="dista" cols="30" rows="9"></textarea>
+            </fieldset>
+        </form>
+        <button style="margin-top: 10px; margin-left: 50%;" type="button" >submit</button>
+    </body>
+</html>

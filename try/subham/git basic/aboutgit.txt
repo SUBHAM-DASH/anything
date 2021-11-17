@@ -1,0 +1,1 @@
+git is a distributed virsion control system.that is free and open sourse and git is used for project collabation and historyexploration .git provides all obenefits of a  distributed  version control system that have been addressed in he preceding section

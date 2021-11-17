@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%=title%></title>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    /* Add padding to containers */
+    .container {
+        padding: 16px;
+        background-color: white;
+    }
+    /* Full-width input fields */
+    input {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+    input {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    /* Overwrite default styles of hr */
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+
+    /* Set a style for the submit button */
+    .registerbtn {
+        background-color: #1e08e2;
+        color: white;
+        padding: 12px 16px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        font-size: 20px;
+    }
+    .registerbtn:hover {
+        opacity: 1;
+    }
+    /* Add a blue text color to links */
+    a {
+        color: dodgerblue;
+    }
+
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+        background-color: #f1f1f1;
+        text-align: center;
+    }
+    .cls{
+        width:600px;
+        margin:auto;
+    }
+</style>
+</head>
+<body>
+    <h1 style="text-align: center; color: blue;">Edit  Products  through  Admin</h1>
+    <div class="cls">
+        <form action="/after_save_product" enctype="multipart/form-data" method="post">
+            <div class="container">
+                <input type="hidden" name="slno" id="productname" value="<%=user.sl_no%>">
+                <label for="productname"><b>Product Name</b></label>
+                <input type="text" placeholder="Product Name" name="productname" id="productname" value="<%=user.product_name%>">
+                <label for="image"><b>Image</b></label>
+                <input type="file" placeholder="Image part" name="image" id="image" value="<%=user.image%>"><br>
+                <label for="productdetails"><b>product Details</b></label>
+                <input type="text" placeholder="Product detail" name="productdetail" id="productdetail" value="<%=user.product_details%>">
+                <label for="cetegory"><b>Cetegory Name</b></label>
+                <input type="text" placeholder="Cetegory detail" name="cetegorydetail" id="cetegorydetail" value="<%=user.cetegory_name%>">
+                <label for="price"><b>Price</b></label>
+                <input type="N" placeholder="Price" name="price" id="price" value="<%=user.price%>">
+                <label for="ranking"><b>Ranking</b></label>
+                <input type="number" placeholder="Ranking" name="ranking" id="ranking" value="<%=user.ranking%>">
+                <label for="currentstatus"><b>Current Status</b></label>
+                <input type="text" placeholder="Current Status" name="currentstatus" id="currentstatus" value="<%=user.current_status%>">
+                <button type="submit" class="registerbtn">Save</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title><%= title%></title>
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+            * {box-sizing: border-box;}
+            .container{
+                border:3px solid rgb(199, 188, 188);
+                max-width: 37%;
+                margin: auto;
+                margin-top: 10%;
+                padding: 10px;
+                height: 300px;
+                box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
+                border-radius: 10px;
+            }
+            .input-container {
+                display: -ms-flexbox; /* IE10 */
+                display: flex;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .icon {
+                padding: 10px;
+                background: dodgerblue;
+                color: white;
+                min-width: 50px;
+                text-align: center;
+            }
+            .input-field {
+                width: 100%;
+                padding: 10px;
+                outline: none;
+                border:2px solid black;
+                font-size: 15px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            .input-field:focus {
+                border: 2px solid rgb(30, 34, 255);
+            }
+            /* Set a style for the submit button */
+            .btn {
+                background-color: dodgerblue;
+                color: white;
+                padding: 12px 18px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+                border-radius: 40px;
+                font-size: 17px;
+            }
+            .btn:hover {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form action="/adminlogin" method="post" style="max-width:400px;margin:auto;margin-top: 50px;" >
+                <div class="input-container">
+                  <i class="fa fa-envelope icon"></i>
+                  <input class="input-field" type="text" placeholder="Email" name="email">
+                </div>
+                <br>
+                <div class="input-container">
+                  <i class="fa fa-key icon"></i>
+                  <input class="input-field" type="password" placeholder="Password" name="password">
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <br><br>
+                <% if(context){ %>
+
+                <% }else{ %> 
+                    <span style="color:rgb(202, 6, 6);font-size: 25px;">PLEASE CHECK YOUR DETAILS</span>
+                <% } %>    
+            </form>
+        </div>
+    </body>
+</html>

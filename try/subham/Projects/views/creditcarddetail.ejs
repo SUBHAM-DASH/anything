@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet"> 
+        <title><%= title%></title>
+        <style>
+            body{
+                margin:0px;
+                font-family: 'Balsamiq Sans', cursive;
+            }
+            th{
+                padding-left: 50px;
+                font-size: 22px;
+                color:darkolivegreen;
+            }
+            td{
+                padding-left: 55px;
+                font-size: 16px;
+                padding-top: 15px;
+            }
+            nav{
+                background-color: blue;
+                padding:20px;
+            }
+            li{
+                display: inline;
+                padding:18px;
+                list-style: none;
+                color:white;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            a{
+                text-decoration: none;
+            }
+            li:hover{
+                color:rgb(139, 0, 0);
+            }
+        </style>
+    </head>
+    <body>,
+        <nav>
+            <ul>
+                <a href="/userdetails"><li>Userdetails</li></a>
+                <a href="/creditcarddetails"><li>Creditcard details</li></a>
+                <a href="/adminproduct"><li>Products</li></a>
+                <a href="/cartproduct"><li>Cartproduct</li></a>
+            </ul>
+        </nav>
+        <h1 style="color:rgb(255, 0, 55); text-align: center;">Credit Card Details</h1>
+        <table style="margin-top: 25px;">
+            <tr>
+                <th>Name</th>
+                <th>Creditcard Number</th>
+                <th>Card exp. Month</th>
+                <th>Card exp. Year</th>
+                <th>Cvv</th>
+                <th>Order Date</th>
+            </tr>
+            <%user.forEach((i)=>{ %>
+            <tr>
+                <td><%= i.name%></td>
+                <td><%= i.credit_card_number%></td>
+                <td><%= i.card_exp_month%></td>
+                <td><%= i.card_exp_year%></td>
+                <td><%= i.cvv%></td>
+                <td><%= i.orderdate.toLocaleString()%></td>
+            </tr>
+            <% }); %>
+        </table>
+    </body>
+</html>

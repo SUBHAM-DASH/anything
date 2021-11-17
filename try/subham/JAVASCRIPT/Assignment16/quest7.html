@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest7</title>
+    <style>
+        th,td{
+            padding-left: 100px;
+            border:2px solid black;
+        }
+    </style>
+</head>
+<body>
+    Name:<input type="text" id="name" name="name"><br><br>
+    Class:<input type="text" id="class" name="class"><br><br>
+    Roll:<input type="text" id="roll" name="roll"><br><br>
+    <button id="btn" onclick="changedata()">click</button>
+    <table id="table"style="border:2px solid black;">
+        <tr>
+            <th>Name</th>
+            <th>class</th>
+            <th>roll</th>
+        </tr>
+        <tr>
+            <td>subham</td>
+            <td>1st</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Rahul</td>
+            <td>2nd</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>Sahil</td>
+            <td>6th</td>
+            <td>78</td>
+        </tr>
+    </table>
+    <script>
+        var Rindex;
+        var table=document.getElementById('table');
+        for(let i=0;i<table.rows.length;i++){
+            table.rows[i].onclick=function(){
+                Rindex=this.rowIndex;
+                document.getElementById('name').value=this.cells[0].innerHTML;
+                document.getElementById('class').value=this.cells[1].innerHTML;
+                document.getElementById('roll').value=this.cells[2].innerHTML;
+            }
+        }
+        function changedata(){
+            table.rows[Rindex].cells[0].innerHTML=document.getElementById('name').value;
+            table.rows[Rindex].cells[1].innerHTML=document.getElementById('class').value;
+            table.rows[Rindex].cells[2].innerHTML=document.getElementById('roll').value;
+        }
+    </script>
+</body>
+</html>
